@@ -22,8 +22,6 @@ serv.get("/root", (req, res) => {
 
 })
 
-serv.use("/test", test);
-
 serv.use("/closingnotes", closingnotes);
 
 serv.listen(port);
