@@ -122,7 +122,7 @@ router.route('/[0-9]{4}-[0-9]{2}-[0-9]{2}')
 
                 console.log(data);
 
-                res.render(__dirname + '/../views/closingNotes.ejs', data);
+                res.render(__dirname + '/../views/pages/closingNotes.ejs', data);
 
             });
 

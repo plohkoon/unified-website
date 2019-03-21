@@ -5,14 +5,14 @@ const   express = require('express'),
         serv = express(),
         port = 8080;
 
-const   test = require('./test'),
-        closingnotes = require('./Routes/closingNotes');
+const   closingnotes  = require('./Routes/closingNotes'),
+        math          = require('./Routes/math');
 
 serv.set('view engine', 'ejs');
 
 serv.get("/", (req, res) => {
 
-    res.send("root");
+    res.render(__dirname + "/views/pages/home.ejs")
 
 })
 
@@ -23,5 +23,7 @@ serv.get("/root", (req, res) => {
 })
 
 serv.use("/closingnotes", closingnotes);
+
+serv.use("/math", math);
 
 serv.listen(port);
