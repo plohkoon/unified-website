@@ -6,9 +6,12 @@ const   express = require('express'),
         port = 8080;
 
 const   closingnotes  = require('./Routes/closingNotes'),
-        math          = require('./Routes/math');
+        math          = require('./Routes/math'),
+        chess         = require('./Routes/chess');
 
 serv.set('view engine', 'ejs');
+
+serv.use(express.static(__dirname + '/public'))
 
 serv.get("/", (req, res) => {
 
@@ -25,5 +28,7 @@ serv.get("/root", (req, res) => {
 serv.use("/closingnotes", closingnotes);
 
 serv.use("/math", math);
+
+serv.use("/chess", chess);
 
 serv.listen(port);
