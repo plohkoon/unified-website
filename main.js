@@ -3,7 +3,7 @@
 const   express = require('express'),
         router = express.Router();
         serv = express(),
-        port = 8080;
+        port = 80;
 
 const   closingnotes  = require('./Routes/closingNotes'),
         math          = require('./Routes/math'),
